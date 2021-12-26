@@ -1,0 +1,175 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - 'app/**/*.rb'
+    - 'lib/**/*.rb'
+    - 'config/**/*.rb'
+  Exclude:
+    - 'config/routes.rb'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'spec/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+
+Rails:
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  ()
+    '%i': ()
+    '%q': ()
+    '%Q': ()
+    '%r': '{}'
+    '%s': ()
+    '%w': ()
+    '%W': ()
+    '%x': ()
+
+Metrics/AbcSize:
+  Max: 26
+
+# .envから値を参照できるようにする
+Rails/EnvironmentVariableAccess:
+  AllowReads: true
+
+# Struct.newからの継承をチェックします
+Style/StructInheritance:
+  Exclude:
+    - 'app/policies/**/*'
+
+#行の長さを120文字まで許容します
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - 'lib/firebase/**/*'
+
+# メソッドの長さは20行までにします
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/tasks/**/*'
+# クラスの長さは200行までにします
+Metrics/ClassLength:
+  Max: 200
+
+# メソッドの長さは50行までにします
+Metrics/BlockLength:
+  Max: 50
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/tasks/**/*'
+
+# 一つのit内に複数expectが内包することを許可します
+RSpec/MultipleExpectations:
+  Enabled: false
+
+# contextの最初に接頭辞when等入れなくてもいいようにします。
+RSpec/ContextWording:
+  Enabled: false
+
+# subjectにnameを設定しなくても良いようにします。
+RSpec/NamedSubject:
+  Enabled: false
+
+# allow_any_instance_ofの使用を許可します
+RSpec/AnyInstance:
+  Enabled: false
+
+# 空のテストグループを許可します。
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+# rspecのネストを7まで許容します
+RSpec/NestedGroups:
+  Max: 7
+
+# アクセス修飾子のインデントをメソッドと同じにします
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+# メソッドチェーンでのスペースを許可しません。
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+# ブロック前の括弧なし引数を不許可とします。
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+# Regexp正規表現内で名前付きキャプチャと番号付きキャプチャの混在を不許可にします
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
+# raise Exception を不許可とします。
+Lint/RaiseException:
+  Enabled: true
+
+# Structを使用したインスタンスで引数としてオーバーライドする変数を許可しません
+Lint/StructNewOverride:
+  Enabled: true
+
+# 指数のフォーマットを統一します
+Style/ExponentialNotation:
+  Enabled: true
+
+# Hash#keys.each{},Hash#values.each{}よりも
+# Hash#each_key,Hash#each_valueを推奨します
+Style/HashEachMethods:
+  Enabled: true
+
+# Hash#each_with_object({}){​},Hash#map{}.to_h の代わりに
+# Hash#transform_keysを推奨します
+Style/HashTransformKeys:
+  Enabled: true
+
+# Hash#transform_valuesを推奨します
+Style/HashTransformValues:
+  Enabled: true
+
+# Hash#fetch(key){value}からHash(key,value)を推奨します
+Style/RedundantFetchBlock:
+  Enabled: true
+
+# 正規表現の不要な文字をチェックします。
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+# 正規表現の冗長なエスケープをチェックします。
+Style/RedundantRegexpEscape:
+  Enabled: true
+
+# 配列終端を-1とした時、無限長配列にします
+# items[1..-1] -> items[1..]
+Style/SlicingWithRange:
+  Enabled: true

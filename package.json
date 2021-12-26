@@ -1,0 +1,25 @@
+{
+  "name": "sample",
+  "private": true,
+  "scripts": {
+    "lint": "yarn run eslint --ext .vue --ext .js --ignore-path .gitignore app/javascript",
+    "stylelint": "stylelint app/javascript/stylesheets/**/*.scss"
+  },
+  "dependencies": {
+    "@rails/activestorage": "^7.0.0",
+    "@rails/ujs": "^7.0.0",
+    "@rails/webpacker": "5.4.3"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.25.3",
+    "stylelint": "^14.2.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-scss": "^4.1.0",
+    "webpack-dev-server": "^4.7.1"
+  }
+}

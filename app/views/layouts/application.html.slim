@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title
+      | rails_postgres
+    = csrf_meta_tags
+    = csp_meta_tag
+    = javascript_pack_tag 'application'
+    = stylesheet_pack_tag 'application', media: 'all'
+  body
+    = yield

@@ -1,0 +1,27 @@
+inherit_from: .rubocop.common.yml
+
+AllCops:
+  TargetRubyVersion: 3.0
+  Include:
+    - "**/Rakefile"
+    - "**/config.ru"
+    - "app/**/*.rb"
+    - "lib/**/*.rb"
+    - "config/**/*.rb"
+  Exclude:
+    - "config/routes.rb"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "log/**/*"
+    - "bin/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+
+Rails:
+  Enabled: true
+
+# 状況によってはletを必要に応じて書き足せるほうがよい
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
