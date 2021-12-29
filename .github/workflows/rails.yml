@@ -51,10 +51,10 @@ jobs:
           apt-get install -y nodejs yarn
       - name: Build and setup
         run: |
-          gem install bundler --no-document -v $(grep "BUNDLED WITH" -1 Gemfile.lock | tail -n 1)
+          gem install bundler -N -v $(grep "BUNDLED WITH" -1 Gemfile.lock | tail -n 1)
           bundle config set deployment 'true'
           bundle install --jobs 4 --retry 3
-          bundle exec rails yarn:install db:setup assets:precompile
+          bundle exec rails yarn:install db:setup webpacker:compile
       - name: Run rspec
         run: bundle exec rspec
       - name: Run rubocop

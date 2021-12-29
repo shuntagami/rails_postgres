@@ -1,7 +1,7 @@
 #!make
 
-### Constants
-REGISTRY_DOMAIN := example.com
+### Constants(customize to your needs.)
+REGISTRY_DOMAIN := shuntagami
 REPOSITORY_NAME := rails_postgres
 
 ### Interpolations
