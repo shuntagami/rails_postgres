@@ -18,6 +18,7 @@ gem 'rack-cors'
 gem 'global'
 gem 'slim-rails'
 gem 'sentry-ruby'
+gem 'committee-rails'
 
 group :development, :test do
   gem 'brakeman', require: false
