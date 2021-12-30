@@ -25,8 +25,8 @@ ENV RAILS_ENV=production
 ENV RACK_ENV=production
 RUN <<eot
 bin/rails webpacker:compile
-rm -rf node_modules tmp/cache spec app/javascript .github
-rm .browserslistrc babel.config.js package.json postcss.config.js yarn.lock .eslintrc.json .dockerignore .gitignore .rspec .rubocop.common.yml .rubocop.yml .slim-lint.yml .stylelintrc.json docker-compose.yml Makefile openapi.yaml README.md
+rm -rf node_modules tmp/cache spec app/javascript .github .git
+rm .browserslistrc babel.config.js package.json postcss.config.js yarn.lock .rspec docker-compose.yml Makefile openapi.yaml
 eot
 
 FROM ruby:3.0.2-slim AS production

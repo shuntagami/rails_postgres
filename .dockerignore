@@ -1,1 +1,51 @@
-node_modules
+# https://gist.github.com/shuntagami/690db265d9e0a17ff272d437d6623f33
+
+.git
+.gitignore
+README.md
+
+#
+# Mac OS
+#
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+#
+# Rails
+#
+.env
+.env.sample
+*.rbc
+node_modules/
+capybara-*.html
+log
+tmp
+db/*.sqlite3
+db/*.sqlite3-journal
+public/system
+coverage/
+spec/tmp
+**.orig
+
+.bundle
+.ruby-version
+.ruby-gemset
+.rubocop.common.yml
+.rubocop.yml
+.slim-lint.yml
+.stylelintrc.json
+.rvmrc
