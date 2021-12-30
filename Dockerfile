@@ -27,6 +27,9 @@ RUN <<eot
 bin/rails webpacker:compile
 rm -rf node_modules tmp/cache spec app/javascript .github .git
 rm .browserslistrc babel.config.js package.json postcss.config.js yarn.lock .rspec docker-compose.yml Makefile openapi.yaml
+rm -rf vendor/bundle/ruby/3.0.0/cache/*.gem
+find vendor/bundle/ruby/3.0.0/gems -name "*.c" -delete
+find vendor/bundle/ruby/3.0.0/gems -name "*.o" -delete
 eot
 
 FROM ruby:3.0.2-slim AS production
