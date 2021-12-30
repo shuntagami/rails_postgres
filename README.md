@@ -6,6 +6,7 @@ This is a dockerized Rails6 application template.
 
 - Database: **PostgreSQL**
 - Test: **Rspec**
+- CI: **Github Actions**
 - Webpacker (Asset Pipeline/Sprockets is disabled)
 - OpenAPI
 - API schema test: **committee-rails**
@@ -41,3 +42,7 @@ $ curl localhost:3000/api/_healthcheck
 $ make image.build # build docker image for production.
 $ make image.push # push to docker registry.
 ```
+
+You can pull my image from docker hub.
+
+- https://hub.docker.com/repository/docker/shuntagami/rails_postgres
