@@ -18,11 +18,11 @@ gem 'rack-cors'
 gem 'global'
 gem 'slim-rails'
 gem 'sentry-ruby'
-gem 'committee-rails'
 
 group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'committee-rails'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'factory_bot_rails'
